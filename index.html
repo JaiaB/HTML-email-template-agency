@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="eng">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern HTML Email Template</title>
+<style type="text/css">
+	body {
+		margin: 0;
+		background-color: #cccccc;
+	}
+	table {
+		border-spacing: 0;
+	}
+	td {
+		padding: 0;
+	}
+	img {
+		border: 0;
+	}
+    /* Adding the center and table tags with their classes is the first step, the second, is to add the resets here. */
+    /* from here on we will be referencing the added classes 
+    they are like resets just to reinforce the styling to be consistent across email clients */
+    .wrapper{
+        /* setting it to a 100% will leave no spacing when resizing the email */
+        width: 100%;
+        /* this property will ensure the wrapper isn't wider than  */
+        table-layout: fixed;
+        background-color: #cccccc;
+    }
+    .main{
+        background-color: #fff;
+        margin: 0 auto;
+        width: 100%;
+        /* THIS IS THE RECOMMENDED WIDTH ACROSS EMAIL CLIENTS */
+        max-width: 600px;
+        /* it leaves no spaces to the sides of the table */
+        border-spacing: 0;
+        /* setting a font will get rid of the standard times new roman */
+        font-family: sans-serif;
+        color: #171a1b;
+    }
+    /* 4 step. Style the navigation columns so they become inline for web and then stack when they are 600px or less*/
+    .two-columns{
+        text-align: center;
+        /* this reduces the icons a little bit */
+        font-size: 0;
+    }
+    .two-columns .column{
+        width: 100%;
+        max-width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+    }
+    .three-columns{
+        text-align: center;
+        font-size: 0;
+        padding: 15px 0 25px;
+    }
+    .three-columns .column{
+        width: 100%;
+        max-width: 200px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+    }
+    .three-columns-text{
+        text-align: left;
+        padding-left: 10px;
+    }
+    /* extra padding so that columns align nicely */
+    .three-columns .padding{
+        padding: 15px;
+    }
+    .three-columns .content{
+        font-size: 15px;
+        line-height: 20px;
+        padding: 0;
+    }
+    .two-columns.last{
+        padding: 15px 0;
+    }
+    .two-columns .padding{
+        padding: 20px;
+    }
+    .two-columns .content{
+        letter-spacing: 0.3px;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: left;
+    }
+    .button{
+        background-color: #fafafa;
+        color:#171a1b;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 2px;
+        font-weight: normal;
+    }
+    .button-dark{
+        background-color: #171a1b;
+        color: #fafafa;
+    }
+  
+</style>
+</head>
+<!-- body reset. capital M for outlook rendering -->
+<body style="Margin:0; padding:0; min-width:100%;">
+    <!-- preheader text. best practice 85-100 characters-->
+    <div style="font-size:0px;line-height:1px;mso-line-height-rule:exactly;display:none;max-width:0px;max-height:0px;opacity:0;overflow:hidden;mso-hide:all;">
+        Check us out! Our team of talented designers will work with you to craft the way your brand or business will stand out from the crowd.
+    </div>
+    <!-- there is a tag called center, which is deprecated in regualr html 5 but it is used for email development -->
+    <center class="wrapper">
+        <!-- we continue with the table tag, which will be the holding the entire content of the email -->
+        <!-- we add a width which will make the content 100% of the center tag -->
+        <table class="main" width="100%">
+        <!-- the third step is to start adding the content for our email which will be contained in table rows and table data tags -->
+<!-- TOP BORDER -->
+            <tr>
+                <td></td>
+            </tr>
+<!-- LOGO SECTION  -->
+            <tr>
+                <!-- this gives padding to the logo top and bottom, we are doing this to make sure it looks good on mobile-->
+                <td style="padding: 14px 0 4px;">
+                    <!-- we need to keep adding spacing, therefore the need for the nesting -->
+                    <!-- this inner table is like a nav -->
+                    <table width="100%">
+                        <tr>
+                            <!-- this will be like a div that will hold the logo and the social icons -->
+                            <td class="two-columns">
+                                <!-- this is used to give extra padding to the logo-->
+                                <table class="column">
+                                    <tr>
+                                        <!-- we are styling this so the logo looks centered on mobile -->
+                                        <td style="padding: 0 62px 10px ;">
+                                            <!-- this is a clickable image -->
+                                            <a href="#"><img width="180" title="Modern Logo" src="https://i.ibb.co/TtHrQ29/modern.jpg" alt="modern logo"></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- this table will contain the social links -->
+                                <table class="column">
+                                    <tr>
+                                        <!-- adding padding to the icons so that it aligns with the logo on mobile -->
+                                        <td style="padding: 10px 72px;">
+                                            <a href="#"><img width="30" src="https://i.ibb.co/10qrKwz/black-facebook.png" alt="black-facebook"></a>
+                                            <a href="#"><img width="30" src="https://i.ibb.co/tz25cDv/black-twitter.png" alt="black-twitter"></a>
+                                            <a href="#"><img width="30" src="https://i.ibb.co/TwysYM9/black-linkedin.png" alt="black-linkedin" ></a>
+                                            <a href="#"><img width="30" src="https://i.ibb.co/LpYrLtz/black-instagram.png" alt="black-instagram"></a>
+                                            <a href="#"><img width="30" src="https://i.ibb.co/6g6S8Rc/black-youtube.png" alt="black-youtube"></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+<!-- BANNER IMAGE -->
+            <tr>
+                <td>
+                    <a href="#"><img width="600" style="max-width:100%;" src="https://i.ibb.co/47Fx746/cleanbanner.png" alt="cleanbanner"></a>
+                    
+                </td>
+            </tr>
+<!-- THREE COLUMN SECTION -->
+            <tr>
+                <td>    
+                    <table width="100%">
+                        <tr>
+                            <td class="three-columns">
+                            <!-- one colum begins --> 
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                               <!-- icon link image start --> 
+                                                <tr>
+                                                    <td>
+                                                    <!--for best practice the width was declared twice -->
+                                                    <a href="#"><img width="90" style="max-width: 90px;" src="https://i.postimg.cc/QMFvpy6B/ecommerce.png" alt="Ecommerce icon"></a>
+                                                    </td>
+                                                </tr>
+                                                <!-- icon link image end -->
+                                                <!-- icon link title and paragraph start --> 
+                                                <tr>
+                                                    <td>
+                                                        <p style="font-weight: bold; font-size: 17px;">Ecommerce</p>
+                                                        <p class="three-columns-text">We take your brand's essence to the digital realm and elevate your customers' online shopping experience.</p>
+                                                    </td>
+                                                </tr>
+                                                <!-- icon link title and paragraph end -->
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            <!-- one column ends -->
+                            <!-- one colum begins --> 
+                            <table class="column">
+                                <tr>
+                                    <td class="padding">
+                                        <table class="content">
+                                           <!-- icon link image start --> 
+                                            <tr>
+                                                <td>
+                                                <!--for best practice the width was declared twice -->
+                                                    <a href="#"><img width="90" style="max-width: 90px;" src="https://i.postimg.cc/3Rp6qDQY/web-design.png" alt="Web Design icon"></a>
+                                                </td>
+                                            </tr>
+                                            <!-- icon link image end -->
+                                            <!-- icon link title and paragraph start --> 
+                                            <tr>
+                                                <td>
+                                                    <p style="font-weight: bold; font-size: 17px;">Web Design</p>
+                                                    <p class="three-columns-text">We craft beautiful and modern websites that convert and engage your ideal customers.</p>
+                                                </td>
+                                            </tr>
+                                            <!-- icon link title and paragraph end -->
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        <!-- one column ends -->
+                        <!-- one colum begins --> 
+                        <table class="column">
+                            <tr>
+                                <td class="padding">
+                                    <table class="content">
+                                       <!-- icon link image start --> 
+                                        <tr>
+                                            <td>
+                                            <!--for best practice the width was declared twice -->
+                                                <a href="#"><img width="90" style="max-width: 90px;" src="https://i.postimg.cc/cJP2TBjF/html-email.png" alt="HTML email icon"></a>
+                                            </td>
+                                        </tr>
+                                        <!-- icon link image end -->
+                                        <!-- icon link title and paragraph start --> 
+                                        <tr>
+                                            <td>
+                                                <p style="font-weight: bold; font-size: 17px;">HTML Emails</p>
+                                                <p class="three-columns-text">Responsive and accesible HTML Email templates to help you build an organic connection with your audience.</p>
+                                            </td>
+                                        </tr>
+                                        <!-- icon link title and paragraph end -->
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    <!-- one column ends -->
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+<!-- TWO COLUMN SECTION -->
+            <tr>
+                <td style="background-color: #26292b; color: #fafafa;">
+                    <table width="100%">
+                        <tr>
+                            <td class="two-columns last">
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img width="260px" height="200" style="max-height: 200px; max-width: 260px; object-fit: cover;"src="https://images.unsplash.com/photo-1588495756505-5437763146dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fGtleWJvYXJkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="keyboard on white background"></a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <p style="font-weight: bold; font-size: 18px;">Create Custom Designs</p>
+                                                        <p style="padding-bottom: 16px;">We make your vision a reality by delivering fresh and pleasing designs that speak for themselves.</p>
+                                                        <a href="#" class="button">Check out our work</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+<!-- TITLE, TEXT & BUTTON -->
+            <tr>
+                <td style="padding:15px 0 50px;">
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align: center; padding: 15px 25px 15px;">
+                                <p style="font-size: 20px; font-weight: bold;">Are you a new business in need of branding?</p>
+                                <p style="font-size: 15px; text-align: left; line-height: 22px; padding: 5px 0 15px;">Worry no more! Fill out the contact form and tell us about your business. We will set you up for an appointment with one of our talented designers to start working on your brand.</p>
+                                <a href="#" class="button button-dark">Contact Form</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+<!-- FOOTER SECTION -->
+            <tr>
+                <td style="background-color: #26292b;">
+                    <table width="100%">
+                        <tr>
+                            <!--CENTERING THE LOGO -->
+                            <td style="text-align: center; padding: 42px 20px; color: #fff;">
+                                <a href="#"><img width="180"src="https://i.ibb.co/3zPwjs5/modern-white.png" alt="modern-white"></a>
+                                <p>Design Agency</p>
+                                <p>123 Silk Rd, Interwebs, Worldwide</p>
+                                <a href="#"><img width="30" src="https://i.ibb.co/qxRHgyF/white-facebook.png" alt="white-facebook"></a>
+                                <a href="#"><img width="30" src="https://i.ibb.co/0VnHn8y/white-twitter.png" alt="white-twitter"></a>
+                                <a href="#"><img width="30" src="https://i.ibb.co/C6MgH4Z/white-linkedin.png" alt="white-linkedin" ></a>
+                                <a href="#"><img width="30" src="https://i.ibb.co/ZcWb6cc/white-instagram.png" alt="white-instagram"></a>
+                                <a href="#"><img width="30" src="https://i.ibb.co/JmcWJ1h/white-youtube.png" alt="white-youtube"></a>
+                                <a style="text-decoration: none; color:#fafafa;" href="#"><p style="padding: 10px;">SUBSCRIBE</p></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
